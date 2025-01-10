@@ -31,18 +31,70 @@
         <div class="title">
           <h2><span>Try it free 7 days</span> then $20/mon thereafter</h2>
         </div>
-        <form method="post" action="">
+        <form class="signup" method="post" action="">
           <div class="form-group">
-            <input type="text" placeholder="First Name" required />
+            <input
+              type="text"
+              id="first-name"
+              placeholder="First Name"
+              required
+            />
+            <image
+              src="./images/icon-error.svg"
+              alt="error"
+              class="error-icon"
+            />
+            <span class="error-message" id="first-name-error"
+              >First Name cannot be empty</span
+            >
           </div>
           <div class="form-group">
-            <input type="text" placeholder="Last Name" required />
+            <input
+              type="text"
+              id="last-name"
+              placeholder="Last Name"
+              required
+            />
+            <image
+              src="./images/icon-error.svg"
+              alt="error"
+              class="error-icon"
+            />
+            <span class="error-message" id="last-name-error"
+              >Last Name cannot be empty</span
+            >
           </div>
           <div class="form-group">
-            <input type="Email" placeholder="Email Address" required />
+            <input
+              type="Email"
+              id="email-address"
+              placeholder="Email Address"
+              required
+            />
+            <image
+              src="./images/icon-error.svg"
+              alt="error"
+              class="error-icon"
+            />
+            <span class="error-message" id="email-error"
+              >Looks like this isn't an email</span
+            >
           </div>
           <div class="form-group">
-            <input type="password" placeholder="Password" required />
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              required
+            />
+            <image
+              src="./images/icon-error.svg"
+              alt="error"
+              class="error-icon"
+            />
+            <span class="error-message" id="password-error"
+              >Password cannot be empty</span
+            >
           </div>
           <button type="submit" class="trial-button">
             claim your free trail

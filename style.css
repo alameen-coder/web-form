@@ -90,6 +90,12 @@ form {
   border-radius: 8px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 }
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
 .form-group input {
   padding: 10px;
   margin-bottom: 15px;
@@ -103,6 +109,35 @@ form {
 .form-group input:focus {
   /* border: 1px solid hsl(246, 25%, 77%); */
   border: 1px solid hsl(248, 32%, 49%);
+}
+
+/* errro message */
+.error-message {
+  font-size: 14px;
+  text-align: right;
+  color: hsl(0, 100%, 74%);
+  display: none;
+}
+
+/* Error icon */
+.form-group {
+  position: relative;
+  width: 300px;
+}
+
+input {
+  padding-left: 30px;
+  width: 100%;
+  height: 40px;
+}
+
+.error-icon {
+  position: absolute;
+  left: 90%;
+  top: 25%;
+  transform: translate(-10%, -50%);
+  color: hsl(0, 100%, 74%);
+  display: none;
 }
 
 .trial-button {
@@ -154,10 +189,9 @@ form {
   }
 
   /* .content {
-    margin-top: 20px;
-    font-size: 12px;
-    padding-top: 10px;
-  } */
+    height: auto;
+    padding: 120px 40px 40px 80px; 
+ */
 }
 
 footer {
@@ -167,7 +201,7 @@ footer {
   width: 100%;
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: -20%;
   font-size: 0.8em;
   color: hsl(246, 25%, 77%);
 }
