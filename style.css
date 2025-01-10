@@ -27,7 +27,7 @@ body {
   margin: 30px;
   /* background-color: #fff; White background for container */
   overflow: hidden;
-  color: hsl(249, 10%, 26%);
+  color: hsl(248, 23%, 36%);
   flex-direction: column; /* Mobile-first design */
   position: relative; /* Ensure footer does not affect layout */
 }
@@ -90,10 +90,7 @@ form {
   border-radius: 8px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 }
-
-input[type="text"],
-input[type="email"],
-input[type="password"] {
+.form-group input {
   padding: 10px;
   margin-bottom: 15px;
   font-size: 16px;
@@ -103,9 +100,7 @@ input[type="password"] {
   font-weight: 500;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus {
+.form-group input:focus {
   /* border: 1px solid hsl(246, 25%, 77%); */
   border: 1px solid hsl(248, 32%, 49%);
 }
@@ -157,6 +152,12 @@ input[type="password"]:focus {
   .form-section {
     flex: 1; /* Equal space for both sections */
   }
+
+  /* .content {
+    margin-top: 20px;
+    font-size: 12px;
+    padding-top: 10px;
+  } */
 }
 
 footer {
