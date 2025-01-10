@@ -116,7 +116,7 @@ form {
   font-size: 14px;
   text-align: right;
   color: hsl(0, 100%, 74%);
-  display: none;
+  /* display: none; */
 }
 
 /* Error icon */
@@ -137,7 +137,7 @@ input {
   top: 25%;
   transform: translate(-10%, -50%);
   color: hsl(0, 100%, 74%);
-  display: none;
+  /* display: none; */
 }
 
 .trial-button {
