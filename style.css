@@ -133,8 +133,9 @@ input {
 
 .error-icon {
   position: absolute;
+  height: 20px;
   left: 90%;
-  top: 25%;
+  top: 40%;
   transform: translate(-10%, -50%);
   color: hsl(0, 100%, 74%);
   display: none;

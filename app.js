@@ -31,33 +31,40 @@ signForm.addEventListener("submit", (e) => {
 
   // Validate first name
   if (firstName.length < 3) {
-    firstError.style.display = "block";
-    document.querySelector("#first-name + .error-icon").style.display = "block";
     valid = false;
+    firstError.style.display = "block";
+    document.querySelector(".error-icon").style.display = "block";
   }
 
   // Validate last name
   if (lastName.length < 3) {
-    lastError.style.display = "block";
-    document.querySelector("#last-name + .error-icon").style.display = "block";
     valid = false;
+    lastError.style.display = "block";
+    document.querySelector(".error-icon").style.display = "block";
   }
 
   // Validate email address
-  const emailPattern =
-    /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)+\.[a-zA-Z]{2,}$/;
-  if (emailPattern.test(emailAddress)) {
-    emailError.style.display = "block";
-    document.querySelector("#email-address + .error-icon").style.display =
-      "block";
+  const emailPattern = /^([\w.-]{2,}@[a-z0-9]{2,}\.[a-z0-9]{2,})/i;
+  // example_123@gmail.com
+  if (!emailPattern.test(emailAddress)) {
     valid = false;
+    emailError.style.display = "block";
+    document.querySelector(".error-icon").style.display = "block";
   }
 
   // Validate password
-  if (password.length < 6) {
-    passwordError.style.display = "block";
-    document.querySelector("#password + .error-icon").style.display = "block";
+  const validatePassword = function (password) {
+    //check if it contain 6 characters
+    const lengthPattern = /\S{6,}/;
+    // check if it contains numbers
+    const digitPattern = /\d/;
+    // return
+    return lengthPattern.test(password) && digitPattern.test(password);
+  };
+  if (!validatePassword(password)) {
     valid = false;
+    passwordError.style.display = "block";
+    document.querySelector(".error-icon").style.display = "block";
   }
 
   if (valid) {
