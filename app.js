@@ -32,7 +32,7 @@ function validateLastName(lastName) {
 
 // Validate email
 function validateEmailAddress(emailAddress) {
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const emailPattern = /^([\w._]{2,}@[a-z0-9]{2,50}\.[a-z0-9]{2,50})/i;
   if (!emailPattern.test(emailAddress)) {
     emailError.style.display = "block";
     document.querySelector("#email-address + .error-icon").style.display =
@@ -78,9 +78,35 @@ function handleSubmit(e) {
   valid &= validatePassword(password);
 
   if (valid) {
-    // Submit the form or perform any other necessary actions
-    console.log("Form submitted successfully!");
+    console.log("Form succefully completed");
     signForm.reset();
+    // Submit the form or perform any other necessary actions
+    //   const formData = new FormData();
+    //   formData.append("first-name", firstName);
+    //   formData.append("last-name", lastName);
+    //   formData.append("email", emailAddress);
+    //   formData.append("password", password);
+
+    //   // Send data to Formspree
+    //   fetch(signForm.action, {
+    //     method: "POST",
+    //     body: formData,
+    //     headers: {
+    //       Accept: "application/json",
+    //     },
+    //   })
+    //     .then((response) => {
+    //       if (response.ok) {
+    //         alert("Form submitted successfully!");
+    //         signForm.reset();
+    //       } else {
+    //         console.error("Form submission error:", response.statusText);
+    //       }
+    //     })
+    //     .catch((error) => {
+    //       console.error("Network error:", error);
+    //     });
+    // }
   }
 }
 
